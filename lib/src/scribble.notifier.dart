@@ -215,11 +215,11 @@ class ScribbleNotifier extends ScribbleNotifierBase
   /// Used by the Listener callback to display the pen if desired
   @override
   void onPointerHover(PointerHoverEvent event) {
-    if (!state.supportedPointerKinds.contains(event.kind)) return;
-    temporaryState = state.copyWith(
-      pointerPosition:
-          event.distance > 10000 ? null : _getPointFromEvent(event),
-    );
+    // if (!state.supportedPointerKinds.contains(event.kind)) return;
+    // temporaryState = state.copyWith(
+    //   pointerPosition:
+    //       event.distance > 10000 ? null : _getPointFromEvent(event),
+    // );
   }
 
   /// Used by the Listener callback to start drawing
