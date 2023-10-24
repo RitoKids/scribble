@@ -71,11 +71,7 @@ class _ScribbleState extends State<Scribble> {
             : GestureCatcher(
                 pointerKindsToCatch: state.supportedPointerKinds,
                 child: MouseRegion(
-                  cursor: drawCurrentTool &&
-                          state.supportedPointerKinds
-                              .contains(PointerDeviceKind.mouse)
-                      ? SystemMouseCursors.none
-                      : MouseCursor.defer,
+                  cursor: MouseCursor.defer,
                   onExit: widget.notifier.onPointerExit,
                   child: Listener(
                     onPointerDown: widget.notifier.onPointerDown,
